@@ -1,0 +1,3 @@
+{{< include story1.qmd >}}
+{{< include story2.qmd >}}
+{{< include story3.qmd >}}

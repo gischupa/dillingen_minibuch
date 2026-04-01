@@ -1,0 +1,37 @@
+project:
+  type: book
+
+book:
+  title: "Kurzgeschichten"
+  subtitle: "Klasse G7b"
+  author: "Lehrer Lempel"
+  date: "10.03.2026"
+  chapters:
+    - index.qmd
+
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    lang: "de"
+    documentclass: scrreprt
+    code-annotations: true
+    keep-tex: false
+
+  eisvogel-pdf:
+    pdf-engine: xelatex
+    lang: "de"
+    titlepage: false
+    toc: false
+    number-sections: false
+    keep-tex: true
+    header-includes:
+      - \usepackage{fontspec}
+      - \setmainfont{TeX Gyre Termes}  # Unicode-fähige Hauptschrift
+      - \setsansfont{TeX Gyre Heros}   # optional, für sans serif
+      - \setmonofont{TeX Gyre Cursor}[Ligatures=TeX]  # ersetzt Fira Mono
+      - \renewcommand{\familydefault}{\rmdefault}    # Erzwingt Hauptschrift überall
+      - \usepackage{polyglossia}
+      - \setmainlanguage{german}
+        
