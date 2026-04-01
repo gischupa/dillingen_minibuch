@@ -1,0 +1,23 @@
+# Render and Deploy Quarto Markdown
+pages:
+  stage: deploy
+  # Image with Quarto and Python
+  image: quarto-git:1.0
+
+  script: 
+    # Make Output Directory
+    - mkdir public
+
+    # Move To Output Directory
+    - mv content/* public/
+    - mv static public/
+
+    # Render
+    - quarto render public/
+  only:
+    - main
+  artifacts:
+    expire_in: 1 min
+    paths:
+      - public # Mandatory, Other Folder Won't Work
+
